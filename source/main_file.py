@@ -72,7 +72,7 @@ player_attributes = {
 player_inventory = ['flask']
 
 
-def character_creator():  # TODO
+def character_creator():
     print(Fore.CYAN + f"1: Warrior, 2: Mage, 3: Thief, 4: Demonknight, 5: Bard, 6: Priest" + Style.RESET_ALL)
     while True:
         try:
