@@ -120,7 +120,7 @@ merchant_stock = ['potion', 'scroll', 'stew', 'armorkit', 'whetstone', 'powder',
                   'smokebomb', 'banisher', 'redpepper', 'backpack']
 
 
-def merchant_event():  # TODO
+def merchant_event():
     merch = choice(merchant_stock)
 
     # merchant item correction
@@ -215,7 +215,7 @@ enemy = {  # enemy stat sheet
 }
 
 
-def attack(unit, target):  # isolated
+def attack(unit, target):
     # calc block chance
     block = randint(1, 100)
     if block <= target['block_chance']:
@@ -295,7 +295,7 @@ def smokebomb():
         print(Fore.BLACK + Back.WHITE + f"\nYou don't have that bomb!" + Style.RESET_ALL)
 
 
-def soulorb(hero, container, opponent):  # isolated
+def soulorb(hero, container, opponent):
     if 'soulorb' in container:
         container.remove('soulorb')
         orb_effect = int(30 + (hero['damage'] / hero['ls_coefficient']))
@@ -335,7 +335,7 @@ def healing(unit, heal_amount, source=''):  # isolated
     status(player, enemy, undead_list, boss_list)
 
 
-def healing_potion():  # TODO
+def healing_potion():
     if player['healing_potions'] > 0:
         player['healing_potions'] -= 1
         healing(player, player['potion_effect'], ' by potion')
@@ -343,7 +343,7 @@ def healing_potion():  # TODO
         print(Fore.BLACK + Back.WHITE + f"\nYou don't have healing potions!" + Style.RESET_ALL)
 
 
-def gold(hero, opponent):  # isolated
+def gold(hero, opponent):
     hero['gold'] += (opponent['gold'] + hero['gold_bonus'])
     print(Back.YELLOW + Fore.BLACK + f"\nYou found {opponent['gold'] + hero['gold_bonus']} gold! ({hero['gold']} now)")
 
