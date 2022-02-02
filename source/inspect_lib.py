@@ -66,6 +66,7 @@ def controls(atts, container):
         print(f"-> soulorb attack")
     if "banisher" in container:
         print(f"-> banisher attack")
+    print(f"-> esc, per, br")
     print(f"-> show attributes")
     print(f"-> {choice(list(atts.keys()))} up (or another attribute)")
     print(f"-> inspect enemy")
